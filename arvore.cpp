@@ -142,27 +142,27 @@ void Arvore::removerRecursivo(No **raiz, Disciplina obj){
     else throw std::string("Elemento não Existe");
 }
 
-void Arvore::buscarRecursivo(No **raiz, Disciplina obj)
+std::string Arvore::buscarRecursivo(No **raiz, int codigo)
 {
     if (*raiz == 0)
     {
-        std::cout << "Nao existe" << std::endl;
+        return "Nao existe\n";
     }
     else
     {
-        if (obj.getCodigo() < (*raiz)->getDado())
+        if (codigo < (*raiz)->getDado())
         {
-            buscarRecursivo(&(*raiz)->esquerda, obj);
+            return buscarRecursivo(&(*raiz)->esquerda, codigo);
         }
         else
         {
-            if (obj.getCodigo() > (*raiz)->getDado())
+            if (codigo > (*raiz)->getDado())
             {
-                buscarRecursivo(&(*raiz)->direita, obj);
+                return buscarRecursivo(&(*raiz)->direita, codigo);
             }
             else
             {
-                std::cout << "Ja existe" << std::endl;
+                return "Existe\n" + (*raiz)->getDisciplina().toString();
             }
         }
     }

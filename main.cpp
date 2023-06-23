@@ -13,11 +13,8 @@ int main(int argc, char *argv[])
     Pedro.inserir(d2);
     Pedro.inserir(d3);
     Pedro.inserir(d4);
+    std::cout << Pedro.buscar(2);
+    std::cout << Pedro.buscar(10);
     Pedro.imprimir();
-    std::cout << "Remover d1\n";
-    Pedro.remover(d1);
-    Pedro.imprimir();
-    Pedro.buscar(d1);
-    Pedro.buscar(d2);
     return a.exec();
 }
