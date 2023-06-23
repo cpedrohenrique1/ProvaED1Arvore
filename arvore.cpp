@@ -18,11 +18,6 @@ void Arvore::inserir(Disciplina obj)
 void Arvore::imprimir()
 {
     std::cout<<"Encaminhamento Central a Esquerda";centralEsquerda(raiz); std::cout<< std::endl;
-    std::cout<<"Encaminhamento Pre-Fixado a Esquerda";preEsquerda(raiz); std::cout<< std::endl;
-    std::cout<<"Encaminhamento Pos-Fixado a Esquerda";posEsquerda(raiz); std::cout<< std::endl;
-    std::cout<<"Encaminhamento Central a Direita";centralDireita(raiz); std::cout<< std::endl;
-    std::cout<<"Encaminhamento Pre-Fixado a Direita";preDireita(raiz); std::cout<< std::endl;
-    std::cout<<"Encaminhamento Pos-Fixado a Direita";posDireita(raiz); std::cout<< std::endl;
 }
 
 void Arvore::remover(Disciplina obj)
