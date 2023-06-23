@@ -15,11 +15,13 @@ private:
     void posDireita (No* raiz) const;
     void centralDireita (No* raiz) const;
     void removerRecursivo(No **raiz, Disciplina obj);
+    void buscarRecursivo(No **raiz, Disciplina obj);
     Disciplina retornar_Maior(No **raiz);
 public:
     Arvore();
     ~Arvore();
     void inserir(Disciplina obj);
+    void buscar(Disciplina obj){buscarRecursivo(&raiz, obj);}
     void imprimir();
     void remover(Disciplina obj);
 };

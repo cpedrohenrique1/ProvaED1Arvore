@@ -4,18 +4,20 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    Arvore teste;
+    Arvore Pedro;
     Disciplina d1(10, "Poo");
     Disciplina d2(20, "Barco");
     Disciplina d3(9, "Paa");
     Disciplina d4(15, "So");
-    teste.inserir(d1);
-    teste.inserir(d2);
-    teste.inserir(d3);
-    teste.inserir(d4);
-    teste.imprimir();
+    Pedro.inserir(d1);
+    Pedro.inserir(d2);
+    Pedro.inserir(d3);
+    Pedro.inserir(d4);
+    Pedro.imprimir();
     std::cout << "Remover d1\n";
-    teste.remover(d1);
-    teste.imprimir();
+    Pedro.remover(d1);
+    Pedro.imprimir();
+    Pedro.buscar(d1);
+    Pedro.buscar(d2);
     return a.exec();
 }
